@@ -11,11 +11,19 @@ const turtle = {
 
 //Bad code
 function feed(animal) {
-    return `Feed ${animal.name} ${animall.meal} kilos of ${anima.diet} `;
+    return `Feed ${animal.name} ${animal.meal} kilos of ${animal.diet} `;
 }
 
 //Good code
-//Object destructuring
+function feed({ name, meal, diet }) {
+    return `Feed ${name} ${meal} kilos of ${diet}`;
+}
+// or
+function feed(animal) {
+    const { naem, meal, diet } = animal;
+    return `Feed ${name} ${meal} kilos of ${diet}`;
+}
+
 
 export { turtle }
 
